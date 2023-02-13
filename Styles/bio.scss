@@ -1,29 +1,409 @@
 @use './partials/variable' as *;
 @use './partials/mixins' as *;
+@use './partials/fonts' as *;
 
-@font-face {
-    font-family: 'Avenir Next';
-    src: url(../Assets/fonts/AvenirNextLTPro-Regular.otf);
-    font-weight: 400;
-    font-style: normal;
+
+* {
+    box-sizing: border-box;
 }
 
-@font-face {
-    font-family: 'Avenir Next';
-    src: url(../Assets/fonts/AvenirNextLTPro-Demi.otf);
-    font-weight: 600;
-    font-style: normal;
+body {
+    margin: 0;
+    font-family: 'AvenirNext LT Pro';
+    color: $primary-black;
 }
 
-@font-face {
-    font-family: 'Avenir Next';
-    src: url(../Assets/fonts/AvenirNextLTPro-Bold.otf);
-    font-weight: 700;
-    font-style: normal;
+//header and nav bar//
+
+.header {
+    color: $primary-white;
+    background-color: $header-background;
+    text-align: center;
+    @include tablet {
+        display: flex;
+        padding: 0rem 2.25rem;
+        align-items: center;
+    }
+    @include desktop {
+        padding: 0rem 9.375rem;
+    }
+    
+    &__logo--img {
+        padding: 1rem 0rem .5rem;
+        width: 7.5rem;
+        @include tablet {
+            margin-right: 1.5625rem;
+        }
+    }
 }
 
-p {
-    font-family: 'avenir next';
-    font-weight: 400;
-    font-size: 24px;
+.nav {
+    font-size: .875rem;
+
+    &__list {
+        margin: 0rem;
+        padding: 0rem;
+        display: flex;
+        list-style: none;
+    }
+
+    &__item {
+        width: 50%;
+        padding: .5rem 0rem 1rem;
+        @include tablet {
+            margin: 0rem 1.5rem;
+            padding: 1.5rem 0rem;
+        }
+    }
+
+    &__item--active {
+        border-bottom: 3px solid $primary-white;
+    }
+
+    &__link {
+        color: $primary-white;
+        text-decoration: none;
+        }
+    }
+
+//hero section//
+
+.hero {
+    background-image: url(../Assets/images/hero-bio.jpg);
+    background-blend-mode: darken;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 90%;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 50vh;
+    padding: 0rem 1rem;
+    display: flex;
+    @include tablet {
+        padding: 0rem 2.25rem;
+        height: 60vh;
+    }
+    @include desktop {
+        height: 70vh;
+        padding: 0rem 9.375rem;
+    }
+
+    &__title {
+        @include mobile-hero-header {
+            margin: 0rem;
+            color: $primary-white;
+            align-self: center;
+        }
+        @include tablet {
+            @include tablet-desktop-hero-header;
+        }
+    }
+}
+
+.introduction {
+    padding: 0rem 1rem;
+    
+    &__title {
+        @include mobile-section-header {
+            margin: 0px;
+            padding: 1.5rem 0rem .5rem;
+        }
+        @include tablet {
+            @include tablet-desktop-section-header;
+            padding: 2.25rem 1rem .75rem;
+        }
+        @include desktop {
+            padding: 2.25rem 8.375rem .75rem;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        padding: .5rem 0rem;
+        @include tablet {
+            padding: .75rem 4.625rem;
+        }
+        @include desktop {
+            padding: .75rem 13.75rem;
+        }
+    
+        &--text {
+            margin: 0px;
+            font-size: .875rem;
+            line-height: 1.375rem;
+            font-weight: 700;
+            padding: .5rem 0rem;
+            @include tablet {
+                font-size: 1.5rem;
+                line-height: 1.375rem;
+                font-weight: 700;
+                padding: .75rem 4.625rem;
+            }
+            @include desktop {
+                padding: .75rem 13.75rem;
+                width: 90%;
+            }
+        }
+
+        &--signature {
+            margin: 0rem;
+            font-size: .875rem;
+            line-height: 1.375rem;
+            font-weight: 700;
+            padding: .5rem 0rem;
+            @include tablet {
+                font-size: 1.125rem;
+                line-height: 1.375rem;
+                font-weight: 600;
+                padding: .75rem 4.625rem;
+            }
+            @include desktop {
+                padding: .75rem 13.75rem;
+            }
+        }
+    }    
+}
+
+.biography {
+    padding: 0rem 1rem;
+    @include tablet {
+        padding: .75rem 5.625rem;
+    }
+    @include desktop {
+        padding: .75rem 14.75rem;
+    }
+    &__title {
+        @include mobile-sub-header {
+            margin: 0rem;
+            padding: .5rem 0rem; 
+        }
+        @include tablet {
+            @include tablet-desktop-sub-header;
+            padding: .75rem 0rem;
+        }
+    }
+
+    &__content {
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__paragraph {
+        @include mobile-bodycopy {
+            margin: 0rem;
+            padding: .5rem 0rem;    
+        }
+        @include tablet {
+            @include tablet-desktop-bodycopy {
+                width: 47%;
+            }  
+        }
+    }
+}
+
+.gallery {
+    background-color: $secondary-alabaster;
+    padding: 0rem 1rem;
+    @include tablet {
+        padding: 0rem 2.25rem;
+    }
+    @include desktop {
+        padding: 0rem 9.375rem;
+    }
+    &__title {
+        @include mobile-section-header {
+            margin: 0rem;
+            padding: 1.5rem 0rem .5rem;
+        }
+        @include tablet {
+            @include tablet-desktop-section-header;
+            padding: 2.25rem 0rem .875rem;
+        }
+    }
+
+    &__images {
+        @include tablet {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding-bottom: .875rem;
+        }
+    }
+
+    &__images > img {
+        width: 100%;
+        padding: .5rem 0rem;
+        @include tablet {
+            width: 31%;
+            padding: .75rem 0rem;
+        }
+    }
+
+    &__image {
+        filter: grayscale(100%);
+        &:hover {
+            filter: none;
+        }
+    }
+}
+
+//footer//
+
+.footer {
+    background-color: $footer-background;
+    color: $primary-white;
+    padding: 0rem 1rem;
+    @include tablet {
+        padding: 0rem 2.25rem;
+    }
+    @include desktop {
+        padding: 0rem 9.375rem;
+    }
+}
+
+.social {
+    @include tablet {
+        display: flex;
+        align-items: center;
+    }
+
+    &__title {
+        @include mobile-section-header {
+            margin: 0px;
+            padding: 1.5rem 0rem .5rem;
+        }
+        @include tablet {
+            @include tablet-desktop-section-header;
+            padding: 2.25rem 0rem .75rem;
+            width: 33.3%;
+        }
+        @include desktop {
+            width: 25%;
+        }
+    }
+    
+    &__images {
+        padding: .5rem 0rem;
+        @include tablet {
+            padding: 2.25rem 0rem .75rem;
+            width: 33.3%;
+        }
+        @include desktop {
+            width: 25%;
+        }
+    }
+
+    &__link {
+        margin-right: 1.75rem;
+    }
+
+    &__link > img {
+        @include tablet {
+            height: 1.5625rem;
+        }
+    }
+}
+
+.contacts {
+    @include tablet {
+        display: flex;
+    }
+
+    &__representative {
+        padding: .5rem 0rem;
+        @include tablet {
+            width: 33.3%;
+        }
+        @include desktop {
+            width: 25%;
+        }
+    }
+
+    &__title {
+        @include mobile-footercopy-bold {
+            margin: .5rem 0rem;
+        }    
+        @include tablet {
+            @include tablet-desktop-footercopy-bold;
+        }
+    }
+
+    &__name {
+        margin: 0rem;
+    }
+
+    &__company {
+        margin: 0rem;
+    }
+    
+    &__address {
+        @include mobile-footercopy {
+            padding: .5rem 0rem;
+        }
+        @include tablet {
+            @include tablet-desktop-footercopy;
+        }
+    }
+
+    &__address > p {
+        margin: 0rem;
+    }
+
+    &__email {
+        @include mobile-footercopy {
+            padding: .5rem 0rem;
+        }
+        @include tablet {
+            @include tablet-desktop-footercopy;
+        }
+    }
+
+    &__email > a {
+        margin: 0rem;
+        color: $primary-white;
+        text-decoration: none;
+
+    }
+}
+
+.footer__logo {
+    &--mobilie {
+        margin-top: 1.5rem;
+        padding: 1.5rem 0rem .5rem;
+        width: 7.5rem;    
+    }
+    &--tablet {
+        display: none;
+    }
+
+    @include tablet {
+        &--tablet {
+            width: 33%;
+            padding: 2.25rem 0rem .75rem;
+            display: flex;
+            justify-content: flex-end;
+            @include desktop {
+                width: 50%;
+            }
+        }
+        &--tablet > img {
+            width: 7.5rem;
+        }
+        &--mobile {
+            display: none;
+        }
+    }
+}
+
+.footer__copyright {
+    @include mobile-footercopy {
+        margin: 0rem;
+        padding: .5rem 0rem 1.5rem;
+    }
+    @include tablet {
+        @include tablet-desktop-footercopy;
+        padding: 2.25rem 0rem;
+    }    
 }

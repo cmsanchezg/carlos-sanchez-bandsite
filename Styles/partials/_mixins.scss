@@ -11,3 +11,92 @@
       @content;
     }
   }
+
+// mobile mixins for fonts
+
+@mixin mobile-hero-header {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+    @content;
+}
+
+@mixin mobile-section-header {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+    @content;
+}
+
+@mixin mobile-sub-header {
+    font-size: .875rem;
+    line-height: 1.375rem;
+    font-weight: 600;
+    @content;
+  }
+
+@mixin mobile-bodycopy {
+  font-size: .8125rem;
+  line-height: 18px;
+  font-weight: 400;
+    @content;
+}
+
+@mixin mobile-footercopy-bold {
+  font-size: .8125rem;
+  line-height: 1.125rem;
+  font-weight: 600;
+    @content;
+}
+
+@mixin mobile-footercopy {
+  font-size: .8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+    @content;
+}
+
+
+// tablet & desktop mixins for fonts
+
+@mixin tablet-desktop-hero-header {
+  font-size: 3.75rem;
+  line-height: 4.25rem;
+  font-weight: 600;
+    @content;
+}
+
+@mixin tablet-desktop-section-header {
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+  font-weight: 600;
+    @content;
+}
+
+@mixin tablet-desktop-sub-header {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+    @content;
+  }
+
+@mixin tablet-desktop-bodycopy {
+  font-size: .875rem;
+  line-height: 1.375rem;
+  font-weight: 400;
+    @content;
+}
+
+@mixin tablet-desktop-footercopy-bold {
+  font-size: .875rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+    @content;
+}
+
+@mixin tablet-desktop-footercopy {
+  font-size: .875rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+    @content;
+}

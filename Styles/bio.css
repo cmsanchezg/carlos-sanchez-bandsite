@@ -1,23 +1,493 @@
 @font-face {
-  font-family: "Avenir Next";
-  src: url(../Assets/fonts/AvenirNextLTPro-Regular.otf);
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Avenir Next";
-  src: url(../Assets/fonts/AvenirNextLTPro-Demi.otf);
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Avenir Next";
-  src: url(../Assets/fonts/AvenirNextLTPro-Bold.otf);
+  font-family: "AvenirNext LT Pro";
+  src: url(../assets/fonts/AvenirNextLTPro-Bold.woff2) format("woff2"), url(../assets/fonts/AvenirNextLTPro-Bold.woff) format("woff"), url(../assets/fonts/AvenirNextLTPro-Bold.ttf) format("truetype");
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }
-p {
-  font-family: "avenir next";
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url(../assets/fonts/AvenirNextLTPro-Demi.woff2) format("woff2"), url(../assets/fonts/AvenirNextLTPro-Demi.woff) format("woff"), url(../assets/fonts/AvenirNextLTPro-Demi.ttf) format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url(../assets/fonts/AvenirNextLTPro-Regular.woff2) format("woff2"), url(../assets/fonts/AvenirNextLTPro-Regular.woff) format("woff"), url(../assets/fonts/AvenirNextLTPro-Regular.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "AvenirNext LT Pro";
+  color: #323232;
+}
+
+.header {
+  color: #ffffff;
+  background-color: #323232;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .header {
+    display: flex;
+    padding: 0rem 2.25rem;
+    align-items: center;
+  }
+}
+@media (min-width: 1280px) {
+  .header {
+    padding: 0rem 9.375rem;
+  }
+}
+.header__logo--img {
+  padding: 1rem 0rem 0.5rem;
+  width: 7.5rem;
+}
+@media (min-width: 768px) {
+  .header__logo--img {
+    margin-right: 1.5625rem;
+  }
+}
+
+.nav {
+  font-size: 0.875rem;
+}
+.nav__list {
+  margin: 0rem;
+  padding: 0rem;
+  display: flex;
+  list-style: none;
+}
+.nav__item {
+  width: 50%;
+  padding: 0.5rem 0rem 1rem;
+}
+@media (min-width: 768px) {
+  .nav__item {
+    margin: 0rem 1.5rem;
+    padding: 1.5rem 0rem;
+  }
+}
+.nav__item--active {
+  border-bottom: 3px solid #ffffff;
+}
+.nav__link {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.hero {
+  background-image: url(../Assets/images/hero-bio.jpg);
+  background-blend-mode: darken;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 90%;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 50vh;
+  padding: 0rem 1rem;
+  display: flex;
+}
+@media (min-width: 768px) {
+  .hero {
+    padding: 0rem 2.25rem;
+    height: 60vh;
+  }
+}
+@media (min-width: 1280px) {
+  .hero {
+    height: 70vh;
+    padding: 0rem 9.375rem;
+  }
+}
+.hero__title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+  margin: 0rem;
+  color: #ffffff;
+  align-self: center;
+}
+@media (min-width: 768px) {
+  .hero__title {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    font-weight: 600;
+  }
+}
+
+.introduction {
+  padding: 0rem 1rem;
+}
+.introduction__title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+  margin: 0px;
+  padding: 1.5rem 0rem 0.5rem;
+}
+@media (min-width: 768px) {
+  .introduction__title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 600;
+    padding: 2.25rem 1rem 0.75rem;
+  }
+}
+@media (min-width: 1280px) {
+  .introduction__title {
+    padding: 2.25rem 8.375rem 0.75rem;
+  }
+}
+.introduction__img {
+  width: 100%;
+  padding: 0.5rem 0rem;
+}
+@media (min-width: 768px) {
+  .introduction__img {
+    padding: 0.75rem 4.625rem;
+  }
+}
+@media (min-width: 1280px) {
+  .introduction__img {
+    padding: 0.75rem 13.75rem;
+  }
+}
+.introduction__img--text {
+  margin: 0px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 700;
+  padding: 0.5rem 0rem;
+}
+@media (min-width: 768px) {
+  .introduction__img--text {
+    font-size: 1.5rem;
+    line-height: 1.375rem;
+    font-weight: 700;
+    padding: 0.75rem 4.625rem;
+  }
+}
+@media (min-width: 1280px) {
+  .introduction__img--text {
+    padding: 0.75rem 13.75rem;
+    width: 90%;
+  }
+}
+.introduction__img--signature {
+  margin: 0rem;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 700;
+  padding: 0.5rem 0rem;
+}
+@media (min-width: 768px) {
+  .introduction__img--signature {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+    font-weight: 600;
+    padding: 0.75rem 4.625rem;
+  }
+}
+@media (min-width: 1280px) {
+  .introduction__img--signature {
+    padding: 0.75rem 13.75rem;
+  }
+}
+
+.biography {
+  padding: 0rem 1rem;
+}
+@media (min-width: 768px) {
+  .biography {
+    padding: 0.75rem 5.625rem;
+  }
+}
+@media (min-width: 1280px) {
+  .biography {
+    padding: 0.75rem 14.75rem;
+  }
+}
+.biography__title {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 600;
+  margin: 0rem;
+  padding: 0.5rem 0rem;
+}
+@media (min-width: 768px) {
+  .biography__title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+    padding: 0.75rem 0rem;
+  }
+}
+@media (min-width: 768px) {
+  .biography__content {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.biography__paragraph {
+  font-size: 0.8125rem;
+  line-height: 18px;
   font-weight: 400;
-  font-size: 24px;
+  margin: 0rem;
+  padding: 0.5rem 0rem;
+}
+@media (min-width: 768px) {
+  .biography__paragraph {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+    width: 47%;
+  }
+}
+
+.gallery {
+  background-color: #fafafa;
+  padding: 0rem 1rem;
+}
+@media (min-width: 768px) {
+  .gallery {
+    padding: 0rem 2.25rem;
+  }
+}
+@media (min-width: 1280px) {
+  .gallery {
+    padding: 0rem 9.375rem;
+  }
+}
+.gallery__title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+  margin: 0rem;
+  padding: 1.5rem 0rem 0.5rem;
+}
+@media (min-width: 768px) {
+  .gallery__title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 600;
+    padding: 2.25rem 0rem 0.875rem;
+  }
+}
+@media (min-width: 768px) {
+  .gallery__images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 0.875rem;
+  }
+}
+.gallery__images > img {
+  width: 100%;
+  padding: 0.5rem 0rem;
+}
+@media (min-width: 768px) {
+  .gallery__images > img {
+    width: 31%;
+    padding: 0.75rem 0rem;
+  }
+}
+.gallery__image {
+  filter: grayscale(100%);
+}
+.gallery__image:hover {
+  filter: none;
+}
+
+.footer {
+  background-color: #323232;
+  color: #ffffff;
+  padding: 0rem 1rem;
+}
+@media (min-width: 768px) {
+  .footer {
+    padding: 0rem 2.25rem;
+  }
+}
+@media (min-width: 1280px) {
+  .footer {
+    padding: 0rem 9.375rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .social {
+    display: flex;
+    align-items: center;
+  }
+}
+.social__title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+  margin: 0px;
+  padding: 1.5rem 0rem 0.5rem;
+}
+@media (min-width: 768px) {
+  .social__title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 600;
+    padding: 2.25rem 0rem 0.75rem;
+    width: 33.3%;
+  }
+}
+@media (min-width: 1280px) {
+  .social__title {
+    width: 25%;
+  }
+}
+.social__images {
+  padding: 0.5rem 0rem;
+}
+@media (min-width: 768px) {
+  .social__images {
+    padding: 2.25rem 0rem 0.75rem;
+    width: 33.3%;
+  }
+}
+@media (min-width: 1280px) {
+  .social__images {
+    width: 25%;
+  }
+}
+.social__link {
+  margin-right: 1.75rem;
+}
+@media (min-width: 768px) {
+  .social__link > img {
+    height: 1.5625rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .contacts {
+    display: flex;
+  }
+}
+.contacts__representative {
+  padding: 0.5rem 0rem;
+}
+@media (min-width: 768px) {
+  .contacts__representative {
+    width: 33.3%;
+  }
+}
+@media (min-width: 1280px) {
+  .contacts__representative {
+    width: 25%;
+  }
+}
+.contacts__title {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 600;
+  margin: 0.5rem 0rem;
+}
+@media (min-width: 768px) {
+  .contacts__title {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 600;
+  }
+}
+.contacts__name {
+  margin: 0rem;
+}
+.contacts__company {
+  margin: 0rem;
+}
+.contacts__address {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+  padding: 0.5rem 0rem;
+}
+@media (min-width: 768px) {
+  .contacts__address {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+  }
+}
+.contacts__address > p {
+  margin: 0rem;
+}
+.contacts__email {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+  padding: 0.5rem 0rem;
+}
+@media (min-width: 768px) {
+  .contacts__email {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+  }
+}
+.contacts__email > a {
+  margin: 0rem;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer__logo--mobilie {
+  margin-top: 1.5rem;
+  padding: 1.5rem 0rem 0.5rem;
+  width: 7.5rem;
+}
+.footer__logo--tablet {
+  display: none;
+}
+@media (min-width: 768px) {
+  .footer__logo--tablet {
+    width: 33%;
+    padding: 2.25rem 0rem 0.75rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+@media (min-width: 768px) and (min-width: 1280px) {
+  .footer__logo--tablet {
+    width: 50%;
+  }
+}
+@media (min-width: 768px) {
+  .footer__logo--tablet > img {
+    width: 7.5rem;
+  }
+}
+@media (min-width: 768px) {
+  .footer__logo--mobile {
+    display: none;
+  }
+}
+
+.footer__copyright {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+  margin: 0rem;
+  padding: 0.5rem 0rem 1.5rem;
+}
+@media (min-width: 768px) {
+  .footer__copyright {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+    padding: 2.25rem 0rem;
+  }
 }/*# sourceMappingURL=bio.css.map */
