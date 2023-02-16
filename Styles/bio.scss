@@ -5,11 +5,12 @@
 
 * {
     box-sizing: border-box;
+    font-family: 'AvenirNext LT Pro';
 }
 
 body {
     margin: 0;
-    font-family: 'AvenirNext LT Pro';
+    // font-family: 'AvenirNext LT Pro';
     color: $primary-black;
 }
 
@@ -246,6 +247,175 @@ body {
         &:hover {
             filter: none;
         }
+    }
+}
+
+.join {
+    padding: 0px 16px;
+    @include tablet {
+        padding: 0px 36px;
+        @include desktop {
+            padding: 0px 150px;
+        }
+    }
+
+
+    &__container {
+        display: flex;
+        border-bottom: 1.5px solid $secondary-mercury;
+        @include tablet { 
+            margin: 0px 60px;
+            @include desktop {
+                margin: 0px 240px;
+            }
+        }
+    }
+
+    &__title {
+        @include mobile-section-header;
+        margin: 0rem;
+        padding: 1.5rem 0rem .5rem;
+        @include tablet {
+            @include tablet-desktop-section-header;
+        }
+    }
+
+    &__muhan-muruge-image {
+        padding-top: 28px;
+        margin-right: 16px;
+    }
+
+    &__muhan-muruge-image >img {
+        height: 36px;
+        width: 36px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: 30%;
+        @include tablet {
+            height: 48px;
+            width: 48px;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        width:100%;
+    }
+
+    &__name {
+        padding: 8px 0px;
+    }
+
+    &__comment {
+        padding: 10px 0px;
+    }
+
+    &__label {
+        color: $primary-silver;
+        font-family: 'AvenirNext LT Pro';
+        font-size: 10px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: 4px 0px;
+        @include tablet {
+            font-size: 12px;
+        }
+    }
+
+    &__input {
+        height: 36px;
+        width: 100%;
+        border: 1.5px solid $secondary-mercury;
+        border-radius: 4px;
+        padding: 12px;
+        @include tablet {
+            height: 48px;
+            padding: 16px;
+        }
+        
+        &--comment {
+            height: 100px;
+        }
+    }
+
+    &__comment--btn {
+        background-color: $primary-black;
+        text-transform  : uppercase;
+        text-align: center;
+        padding: 10px;
+        border-radius: 4px;
+        margin-bottom: 24px;
+        height: 40px;
+        @include tablet {
+            width: 150px;
+            padding: 10px 32px;
+            margin-left: auto;
+        }
+    }
+
+    &__comment--btn > a {
+        color: $primary-white;
+        font-size: 14px;
+        font-weight: 600;
+        text-decoration: none;
+    }
+}
+
+.comment {
+    padding: 0px 1rem;
+    @include tablet {
+        padding: 0px 96px;
+        @include desktop {
+            padding: 0px 390px;
+        }
+    }
+
+    &__first {
+        border-bottom: 1.5px solid $secondary-mercury;
+        padding-top: 16px;
+        display: flex;
+    }
+
+    &__user-image {
+        margin-right: 16px;
+        height: 36px;
+        width: 36px;
+        border-radius: 50%;
+        background-color: $secondary-mercury;
+        @include tablet {
+            height: 48px;
+            width: 48px;
+        }
+    }
+
+    &__info {
+        flex: 1;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        font-size: 13px;
+        @include tablet {
+            font-size: 14px;
+        }
+    }
+
+    &__user {
+        margin: 0px;
+        color: $primary-black;
+        font-weight: 600;
+    }
+
+    &__date {
+        margin: 0px;
+        color: $primary-silver;
+        font-weight: 400;
+    }
+
+    &__text {
+        @include mobile-bodycopy;
     }
 }
 
