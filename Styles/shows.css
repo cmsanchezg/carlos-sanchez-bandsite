@@ -1,0 +1,100 @@
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url(../assets/fonts/AvenirNextLTPro-Bold.woff2) format("woff2"), url(../assets/fonts/AvenirNextLTPro-Bold.woff) format("woff"), url(../assets/fonts/AvenirNextLTPro-Bold.ttf) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url(../assets/fonts/AvenirNextLTPro-Demi.woff2) format("woff2"), url(../assets/fonts/AvenirNextLTPro-Demi.woff) format("woff"), url(../assets/fonts/AvenirNextLTPro-Demi.ttf) format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url(../assets/fonts/AvenirNextLTPro-Regular.woff2) format("woff2"), url(../assets/fonts/AvenirNextLTPro-Regular.woff) format("woff"), url(../assets/fonts/AvenirNextLTPro-Regular.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+.hero {
+  background-image: url(../Assets/images/hero-shows.jpg);
+  background-blend-mode: darken;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 90%;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 55vh;
+  padding: 0px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+@media (min-width: 1280px) {
+  .hero {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+@media (min-width: 768px) {
+  .hero {
+    padding: 0rem 2.25rem;
+    height: 100vh;
+  }
+}
+@media (min-width: 1280px) {
+  .hero {
+    height: 80vh;
+    padding: 0rem 9.375rem;
+  }
+}
+.hero__album {
+  font-size: 14px;
+  line-height: 1.1125rem;
+  font-weight: 400;
+  margin: 0rem;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+@media (min-width: 768px) {
+  .hero__album {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+.hero__song {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+  margin: 0rem;
+  color: #ffffff;
+  width: 70%;
+  margin-bottom: 16px;
+}
+@media (min-width: 768px) {
+  .hero__song {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    font-weight: 600;
+    margin-bottom: 36px;
+  }
+}
+@media (min-width: 1280px) {
+  .hero__song {
+    width: 85%;
+  }
+}
+.hero__music {
+  width: auto;
+  height: 100px;
+}
+@media (min-width: 768px) {
+  .hero__music {
+    width: 425px;
+    height: 140px;
+  }
+}/*# sourceMappingURL=shows.css.map */

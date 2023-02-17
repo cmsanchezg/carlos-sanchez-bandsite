@@ -1,0 +1,69 @@
+@use './partials/variable' as *;
+@use './partials/mixins' as *;
+@use './partials/fonts' as *;
+
+.hero {
+    background-image: url(../Assets/images/hero-shows.jpg);
+    background-blend-mode: darken;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 90%;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 55vh;
+    padding: 0px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    @include desktop {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    @include tablet {
+        padding: 0rem 2.25rem;
+        height: 100vh;
+    }
+    @include desktop {
+        height: 80vh;
+        padding: 0rem 9.375rem;
+    }
+
+    &__album {
+        font-size: 14px;
+        line-height: 1.1125rem;
+        font-weight: 400;    
+        margin: 0rem;
+        color: $primary-white;
+        margin-bottom: 16px;
+        @include tablet {
+            font-size: 24px;
+            line-height: 32px;
+        }
+    }
+
+    &__song {
+        @include mobile-hero-header;
+        margin: 0rem;
+        color: $primary-white;
+        width: 70%;
+        margin-bottom: 16px;
+        @include tablet {
+            @include tablet-desktop-hero-header;
+            margin-bottom: 36px;
+        }
+        @include desktop {
+            width: 85%;
+        }
+    }
+
+    &__music {
+        width: auto;
+        height: 100px;
+        @include tablet {
+            width: 425px;
+            height: 140px;
+        }
+    }
+}
