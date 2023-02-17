@@ -242,34 +242,20 @@
   filter: none;
 }
 
-.join {
+.conversation {
   padding: 0px 16px;
 }
 @media (min-width: 768px) {
-  .join {
+  .conversation {
     padding: 0px 36px;
   }
 }
 @media (min-width: 768px) and (min-width: 1280px) {
-  .join {
+  .conversation {
     padding: 0px 150px;
   }
 }
-.join__container {
-  display: flex;
-  border-bottom: 1.5px solid #e1e1e1;
-}
-@media (min-width: 768px) {
-  .join__container {
-    margin: 0px 60px;
-  }
-}
-@media (min-width: 768px) and (min-width: 1280px) {
-  .join__container {
-    margin: 0px 240px;
-  }
-}
-.join__title {
+.conversation__title {
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 600;
@@ -277,17 +263,31 @@
   padding: 1.5rem 0rem 0.5rem;
 }
 @media (min-width: 768px) {
-  .join__title {
+  .conversation__title {
     font-size: 2.25rem;
     line-height: 2.75rem;
     font-weight: 600;
   }
 }
-.join__muhan-muruge-image {
+.conversation__container {
+  display: flex;
+  border-bottom: 1.5px solid #e1e1e1;
+}
+@media (min-width: 768px) {
+  .conversation__container {
+    margin: 0px 60px;
+  }
+}
+@media (min-width: 1280px) {
+  .conversation__container {
+    margin: 0px 240px;
+  }
+}
+.conversation__muhan-muruge-image {
   padding-top: 28px;
   margin-right: 16px;
 }
-.join__muhan-muruge-image > img {
+.conversation__muhan-muruge-image > img {
   height: 36px;
   width: 36px;
   border-radius: 50%;
@@ -297,23 +297,20 @@
      object-position: 30%;
 }
 @media (min-width: 768px) {
-  .join__muhan-muruge-image > img {
+  .conversation__muhan-muruge-image > img {
     height: 48px;
     width: 48px;
   }
 }
-.join__form {
+.conversation__form {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
-.join__name {
+.conversation__name {
   padding: 8px 0px;
 }
-.join__comment {
-  padding: 10px 0px;
-}
-.join__label {
+.conversation__label {
   color: #afafaf;
   font-family: "AvenirNext LT Pro";
   font-size: 10px;
@@ -322,11 +319,11 @@
   margin: 4px 0px;
 }
 @media (min-width: 768px) {
-  .join__label {
+  .conversation__label {
     font-size: 12px;
   }
 }
-.join__input {
+.conversation__input {
   height: 36px;
   width: 100%;
   border: 1.5px solid #e1e1e1;
@@ -334,15 +331,18 @@
   padding: 12px;
 }
 @media (min-width: 768px) {
-  .join__input {
+  .conversation__input {
     height: 48px;
     padding: 16px;
   }
 }
-.join__input--comment {
+.conversation__input--comment {
   height: 100px;
 }
-.join__comment--btn {
+.conversation__comment {
+  padding: 10px 0px;
+}
+.conversation__comment__btn {
   background-color: #323232;
   text-transform: uppercase;
   text-align: center;
@@ -352,13 +352,13 @@
   height: 40px;
 }
 @media (min-width: 768px) {
-  .join__comment--btn {
+  .conversation__comment__btn {
     width: 150px;
     padding: 10px 32px;
     margin-left: auto;
   }
 }
-.join__comment--btn > a {
+.conversation__comment__btn > a {
   color: #ffffff;
   font-size: 14px;
   font-weight: 600;
@@ -378,7 +378,7 @@
     padding: 0px 390px;
   }
 }
-.comment__first {
+.comment__entry {
   border-bottom: 1.5px solid #e1e1e1;
   padding-top: 16px;
   display: flex;
@@ -409,7 +409,7 @@
     font-size: 14px;
   }
 }
-.comment__user {
+.comment__user__name {
   margin: 0px;
   color: #323232;
   font-weight: 600;

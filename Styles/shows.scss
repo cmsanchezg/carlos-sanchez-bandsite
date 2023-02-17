@@ -67,3 +67,134 @@
         }
     }
 }
+
+.event {
+    @include tablet {
+        padding: 0px 36px;
+    }
+    
+    @include desktop {
+        padding: 0px 144px;
+        display: flex;
+        &__section {
+            flex-direction: column;
+            padding: 36px 0px;
+            width: 100%;
+        }
+    }
+
+    &__header {
+        margin: 0px;
+        @include mobile-section-header;
+        padding: 24px 16px 8px;
+
+        @include tablet {
+            @include tablet-desktop-section-header
+        }
+        @include desktop {
+            margin-right: 100px;
+        }
+    }
+
+    // " __sub__header--tablet__invisible to remove header from being display in mobile screen" //
+
+    &__sub__header--tablet__invisible {
+        display: none;
+        
+        @include tablet {
+            display: flex;
+        }
+    }
+
+    &__sub__header--tablet__invisible > p {
+        padding: 0px 16px;
+    }
+    
+    // " __sub__header--mobile__invisible to remove header from being display in tablet/desktop screen" //
+
+    &__sub__header--mobile__invisible {
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__upcoming {
+        margin-top: 8px;
+        border-bottom: 1.5px solid $secondary-mercury;
+        
+        @include tablet {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__date,
+    &__venue,
+    &__location {
+        line-height: 18px;
+        padding: 4px 16px;
+        
+        @include tablet {
+            width: 25%;
+        }
+    }
+
+    &__sub__header {
+        margin: 0px;
+        color: $primary-silver;
+        font-family: 'AvenirNext LT Pro';
+        font-size: 10px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: 4px 0px;
+        width: 25%;
+        
+        @include tablet {
+            font-size: 12px;
+        }
+        
+        @include desktop {
+            font-size: 14px;
+        }
+    }
+
+    &__info {
+        margin: 0px;
+        font-size: 13px;
+        font-weight: 600;
+
+        &--bolder {
+            font-weight: 700;
+        }
+        
+        @include tablet {
+            font-size: 14px;
+        }
+        
+        @include desktop {
+            font-size: 16px;
+        }
+    }
+
+    &__buy__tickets__btn {
+        background-color: $primary-black;
+        text-transform  : uppercase;
+        text-align: center;
+        padding: 10px;
+        border-radius: 4px;
+        margin: 16px;
+        height: 40px;
+        
+        @include tablet {
+            width: 150px;
+            margin-left: auto;
+        }
+    }
+
+    &__buy__tickets__btn > a {
+        color: $primary-white;
+        font-size: 14px;
+        font-weight: 600;
+        text-decoration: none;
+    }
+}

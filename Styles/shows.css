@@ -97,4 +97,134 @@
     width: 425px;
     height: 140px;
   }
+}
+
+@media (min-width: 768px) {
+  .event {
+    padding: 0px 36px;
+  }
+}
+@media (min-width: 1280px) {
+  .event {
+    padding: 0px 144px;
+    display: flex;
+  }
+  .event__section {
+    flex-direction: column;
+    padding: 36px 0px;
+    width: 100%;
+  }
+}
+.event__header {
+  margin: 0px;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+  padding: 24px 16px 8px;
+}
+@media (min-width: 768px) {
+  .event__header {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 600;
+  }
+}
+@media (min-width: 1280px) {
+  .event__header {
+    margin-right: 100px;
+  }
+}
+.event__sub__header--tablet__invisible {
+  display: none;
+}
+@media (min-width: 768px) {
+  .event__sub__header--tablet__invisible {
+    display: flex;
+  }
+}
+.event__sub__header--tablet__invisible > p {
+  padding: 0px 16px;
+}
+@media (min-width: 768px) {
+  .event__sub__header--mobile__invisible {
+    display: none;
+  }
+}
+.event__upcoming {
+  margin-top: 8px;
+  border-bottom: 1.5px solid #e1e1e1;
+}
+@media (min-width: 768px) {
+  .event__upcoming {
+    display: flex;
+    align-items: center;
+  }
+}
+.event__date, .event__venue, .event__location {
+  line-height: 18px;
+  padding: 4px 16px;
+}
+@media (min-width: 768px) {
+  .event__date, .event__venue, .event__location {
+    width: 25%;
+  }
+}
+.event__sub__header {
+  margin: 0px;
+  color: #afafaf;
+  font-family: "AvenirNext LT Pro";
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 4px 0px;
+  width: 25%;
+}
+@media (min-width: 768px) {
+  .event__sub__header {
+    font-size: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .event__sub__header {
+    font-size: 14px;
+  }
+}
+.event__info {
+  margin: 0px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.event__info--bolder {
+  font-weight: 700;
+}
+@media (min-width: 768px) {
+  .event__info {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1280px) {
+  .event__info {
+    font-size: 16px;
+  }
+}
+.event__buy__tickets__btn {
+  background-color: #323232;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px;
+  border-radius: 4px;
+  margin: 16px;
+  height: 40px;
+}
+@media (min-width: 768px) {
+  .event__buy__tickets__btn {
+    width: 150px;
+    margin-left: auto;
+  }
+}
+.event__buy__tickets__btn > a {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
 }/*# sourceMappingURL=shows.css.map */

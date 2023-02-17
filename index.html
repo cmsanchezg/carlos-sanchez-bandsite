@@ -82,33 +82,33 @@
         </div>
     </section>
 
-    <section class="join">
-        <h2 class="join__title">Join the Conversation</h2>
-        <article class="join__container">   
-            <div class="join__muhan-muruge-image">
+    <section class="conversation">
+        <h2 class="conversation__title">Join the Conversation</h2>
+        <article class="conversation__container">   
+            <div class="conversation__muhan-muruge-image">
                 <img src="./Assets/images/Mohan-muruge.jpg" alt="Mohan Muruge">
             </div>
-            <form class="join__form">
-                <div class="join__name">
-                    <label class="join__label" for="name">Name</label>    
+            <form class="conversation__form">
+                <div class="conversation__name">
+                    <label class="conversation__label" for="name">Name</label>    
                     <input 
-                    class="join__input" 
+                    class="conversation__input" 
                     type="text" 
                     placeholder="Enter your name"
                     name="userName"
                     id="userName">  
                 </div>    
-                <div class="join__comment">    
-                    <label class="join__label" for="comment">Comment</label>
+                <div class="conversation__comment">    
+                    <label class="conversation__label" for="comment">Comment</label>
                     <textarea
-                    class="join__input join__input--comment" 
+                    class="conversation__input conversation__input--comment" 
                     type="text" 
                     placeholder="Add a new comment"
                     name= "userComment"
                     id="userComment">
                     </textarea>
                 </div>
-                <div class="join__comment--btn">
+                <div class="conversation__comment__btn">
                     <a href="#">Comment</a>
                 </div>
             </form>           
@@ -116,13 +116,13 @@
     </section>
 
     <section class="comment">
-        <article class="comment__first">
+        <article class="comment__entry">
             <div class="comment__user-image">
-
+                <!-- empty div for the silver img -->
             </div>
             <div class="comment__info">
                 <div class="comment__header">
-                    <p class="comment__user">Connor Walton</p>
+                    <p class="comment__user__name">Connor Walton</p>
                     <p class="comment__date">02/17/2021</p>
                 </div>
                 <div class="comment__input">
@@ -134,13 +134,14 @@
                 </div>
             </div>
         </article>
-        <article class="comment__first">
+        
+        <article class="comment__entry">
             <div class="comment__user-image">
-
+                <!-- empty div for the silver img -->
             </div>
             <div class="comment__info">
                 <div class="comment__header">
-                    <p class="comment__user">Connor Walton</p>
+                    <p class="comment__user__name">Connor Walton</p>
                     <p class="comment__date">02/17/2021</p>
                 </div>
                 <div class="comment__input">
@@ -152,6 +153,26 @@
                 </div>
             </div>
         </article>
+
+        <article class="comment__entry">
+            <div class="comment__user-image">
+                <!-- empty div for the silver img -->
+            </div>
+            <div class="comment__info">
+                <div class="comment__header">
+                    <p class="comment__user__name">Connor Walton</p>
+                    <p class="comment__date">02/17/2021</p>
+                </div>
+                <div class="comment__input">
+                    <p class="comment__text">This is art. This is inexplicable magic 
+                        expressed in the purest way, everything 
+                        that makes up this majestic work 
+                        deserves reverence. Let us appreciate 
+                        this for what it is and what it contains.</p>
+                </div>
+            </div>
+        </article>
+
     </section>
 
     <footer class="footer">
