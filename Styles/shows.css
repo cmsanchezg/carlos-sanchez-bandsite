@@ -100,22 +100,22 @@
 }
 
 @media (min-width: 768px) {
-  .event {
+  .show {
     padding: 0px 36px;
   }
 }
 @media (min-width: 1280px) {
-  .event {
+  .show {
     padding: 0px 144px;
     display: flex;
   }
-  .event__section {
+  .show__section {
     flex-direction: column;
     padding: 36px 0px;
     width: 100%;
   }
 }
-.event__header {
+.show__header {
   margin: 0px;
   font-size: 1.5rem;
   line-height: 2rem;
@@ -123,53 +123,66 @@
   padding: 24px 16px 8px;
 }
 @media (min-width: 768px) {
-  .event__header {
+  .show__header {
     font-size: 2.25rem;
     line-height: 2.75rem;
     font-weight: 600;
   }
 }
 @media (min-width: 1280px) {
-  .event__header {
+  .show__header {
     margin-right: 100px;
   }
 }
-.event__sub__header--tablet__invisible {
+.show__sub__header--tablet__invisible {
   display: none;
 }
 @media (min-width: 768px) {
-  .event__sub__header--tablet__invisible {
+  .show__sub__header--tablet__invisible {
     display: flex;
   }
 }
-.event__sub__header--tablet__invisible > p {
+.show__sub__header--tablet__invisible > p {
   padding: 0px 16px;
 }
 @media (min-width: 768px) {
-  .event__sub__header--mobile__invisible {
+  .show__sub__header--mobile__invisible {
     display: none;
   }
 }
-.event__upcoming {
-  margin-top: 8px;
+.show__list {
+  padding: 0px;
+  margin: 0px;
+}
+.show__item {
   border-bottom: 1.5px solid #e1e1e1;
+  list-style: none;
+}
+.show__item:hover {
+  background-color: #fafafa;
+}
+.show__item--clicked {
+  background-color: #e1e1e1;
+}
+.show__item--clicked:hover {
+  background-color: #e1e1e1;
 }
 @media (min-width: 768px) {
-  .event__upcoming {
+  .show__item {
     display: flex;
     align-items: center;
   }
 }
-.event__date, .event__venue, .event__location {
+.show__date, .show__venue, .show__location {
   line-height: 18px;
   padding: 4px 16px;
 }
 @media (min-width: 768px) {
-  .event__date, .event__venue, .event__location {
+  .show__date, .show__venue, .show__location {
     width: 25%;
   }
 }
-.event__sub__header {
+.show__sub__header {
   margin: 0px;
   color: #afafaf;
   font-family: "AvenirNext LT Pro";
@@ -180,34 +193,34 @@
   width: 25%;
 }
 @media (min-width: 768px) {
-  .event__sub__header {
+  .show__sub__header {
     font-size: 12px;
   }
 }
 @media (min-width: 1280px) {
-  .event__sub__header {
+  .show__sub__header {
     font-size: 14px;
   }
 }
-.event__info {
+.show__info {
   margin: 0px;
   font-size: 13px;
   font-weight: 600;
 }
-.event__info--bolder {
+.show__info--bolder {
   font-weight: 700;
 }
 @media (min-width: 768px) {
-  .event__info {
+  .show__info {
     font-size: 14px;
   }
 }
 @media (min-width: 1280px) {
-  .event__info {
+  .show__info {
     font-size: 16px;
   }
 }
-.event__buy__tickets__btn {
+.show__buy__ticket__btn {
   background-color: #323232;
   text-transform: uppercase;
   text-align: center;
@@ -216,13 +229,16 @@
   margin: 16px;
   height: 40px;
 }
+.show__buy__ticket__btn:hover {
+  background-color: #000000;
+}
 @media (min-width: 768px) {
-  .event__buy__tickets__btn {
+  .show__buy__ticket__btn {
     width: 150px;
     margin-left: auto;
   }
 }
-.event__buy__tickets__btn > a {
+.show__buy__ticket__btn > a {
   color: #ffffff;
   font-size: 14px;
   font-weight: 600;

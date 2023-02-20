@@ -68,7 +68,7 @@
     }
 }
 
-.event {
+.show {
     @include tablet {
         padding: 0px 36px;
     }
@@ -118,10 +118,26 @@
         }
     }
 
-    &__upcoming {
-        margin-top: 8px;
+    &__list {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    &__item {
         border-bottom: 1.5px solid $secondary-mercury;
-        
+        list-style: none;
+
+        &:hover {
+            background-color: $secondary-alabaster;
+        }
+
+        &--clicked {
+            background-color: $secondary-mercury;
+            &:hover {
+                background-color: $secondary-mercury;
+            }
+        }
+
         @include tablet {
             display: flex;
             align-items: center;
@@ -176,7 +192,7 @@
         }
     }
 
-    &__buy__tickets__btn {
+    &__buy__ticket__btn {
         background-color: $primary-black;
         text-transform  : uppercase;
         text-align: center;
@@ -185,13 +201,17 @@
         margin: 16px;
         height: 40px;
         
+        &:hover {
+            background-color: $secondary-darkblack;
+        }
+
         @include tablet {
             width: 150px;
             margin-left: auto;
         }
     }
 
-    &__buy__tickets__btn > a {
+    &__buy__ticket__btn > a {
         color: $primary-white;
         font-size: 14px;
         font-weight: 600;
