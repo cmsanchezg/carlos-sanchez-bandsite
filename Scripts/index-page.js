@@ -16,7 +16,7 @@ const commentList = [
     {
         commentUserName:"Miles Acosta",
         commentDate:new Date("12/20/2020").toLocaleDateString(),
-        commentText:"I can t stop listening. Every time I hear one of their songs the vocals it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can t get enough.",
+        commentText:"I can't stop listening. Every time I hear one of their songs the vocals it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can t get enough.",
     },
 ];
 

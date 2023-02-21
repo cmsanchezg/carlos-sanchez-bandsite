@@ -312,7 +312,7 @@
 }
 .conversation__label {
   color: #afafaf;
-  font-family: "AvenirNext LT Pro";
+  font-family: "AvenirNext LT Pro", Arial, Helvetica, sans-serif;
   font-size: 0.625rem;
   font-weight: 600;
   text-transform: uppercase;
