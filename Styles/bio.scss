@@ -28,7 +28,7 @@
     &__title {
         @include mobile-hero-header {
             margin: 0rem;
-            color: $primary-white;
+            color: $primary-third;
             align-self: center;
         }
         @include tablet {
@@ -141,7 +141,7 @@
 }
 
 .gallery {
-    background-color: $secondary-alabaster;
+    background-color: $secondary-third;
     padding: 0rem 1rem;
     @include tablet {
         padding: 0rem 2.25rem;
@@ -187,13 +187,13 @@
 }
 
 .conversation {
-    padding: 0px 16px;
+    padding: 0rem 1rem;
     
     @include tablet {
-        padding: 0px 36px;
+        padding: 0rem 2.25rem;
         
     @include desktop {
-        padding: 0px 150px;
+        padding: 0rem 9.375rem;
         }
     }
 
@@ -209,32 +209,32 @@
 
     &__container {
         display: flex;
-        border-bottom: 1.5px solid $secondary-mercury;
+        border-bottom: 1.5px solid $secondary-second;
         
         @include tablet { 
-        margin: 0px 60px;
+        margin: 0rem 3.75rem;
         }
         
         @include desktop {
-            margin: 0px 240px;
+            margin: 0rem 15rem;
         }
     }
 
     &__muhan-muruge-image {
-        padding-top: 28px;
-        margin-right: 16px;
+        padding-top: 1.75rem;
+        margin-right: 1rem;
     }
 
     &__muhan-muruge-image > img {
-        height: 36px;
-        width: 36px;
+        height: 2.25rem;
+        width: 2.25rem;
         border-radius: 50%;
         object-fit: cover;
         object-position: 30%;
         
         @include tablet {
-            height: 48px;
-            width: 48px;
+            height: 3rem;
+            width: 3rem;
         }
     }
 
@@ -245,64 +245,57 @@
     }
 
     &__name {
-        padding: 8px 0px;
+        padding: 0.5rem 0rem;
     }
 
     &__label {
-        color: $primary-silver;
-        font-family: 'AvenirNext LT Pro';
-        font-size: 10px;
+        color: $primary-second;
+        font-family: 'AvenirNext LT Pro', Arial, Helvetica, sans-serif;
+        font-size: 0.625rem;
         font-weight: 600;
         text-transform: uppercase;
-        margin: 4px 0px;
+        margin: 0.25rem 0rem;
         
         @include tablet {
-            font-size: 12px;
+            font-size: 0.75rem;
         }
     }
 
     &__input {
-        height: 36px;
+        height: 2.25rem;
         width: 100%;
-        border: 1.5px solid $secondary-mercury;
+        border: 1.5px solid $secondary-second;
         border-radius: 4px;
-        padding: 12px;
+        padding: 0.75rem;
         
         @include tablet {
-            height: 48px;
-            padding: 16px;
+            height: 3rem;
+            padding: 1rem;
         }
         
         &--comment {
-            height: 100px;
+            height: 6.25rem;
         }
-    }
-
-    &__comment {
-        padding: 10px 0px;
     }
 
     &__comment__btn {
-        background-color: $primary-black;
-        text-transform  : uppercase;
+        background-color: $primary-first;
         text-align: center;
-        padding: 10px;
-        border-radius: 4px;
-        margin-bottom: 24px;
-        height: 40px;
+        color: $primary-white;
+        padding: 0.625rem;
+        border-radius: 0.25rem;
+        margin: 1rem 0rem;
+        height: 2.5rem;
+        text-transform: uppercase;
+        font-size: 0.875;
+        font-weight: 600;
+        border: none;
         
         @include tablet {
-            width: 150px;
-            padding: 10px 32px;
+            width: 9.375rem;
+            padding: 0.625rem 2rem;
             margin-left: auto;
         }
-    }
-
-    &__comment__btn > a {
-        color: $primary-white;
-        font-size: 14px;
-        font-weight: 600;
-        text-decoration: none;
     }
 }
 
@@ -310,29 +303,29 @@
     padding: 0px 1rem;
     
     @include tablet {
-        padding: 0px 96px;
+        padding: 0rem 6rem;
     
     @include desktop {
-        padding: 0px 390px;
+        padding: 0rem 24.375rem;
         }
     }
 
-    &__entry {
-        border-bottom: 1.5px solid $secondary-mercury;
-        padding-top: 16px;
+    &__item {
+        border-bottom: 1.5px solid $secondary-second;
+        padding-top: 1rem;
         display: flex;
     }
 
-    &__user-image {
-        margin-right: 16px;
-        height: 36px;
-        width: 36px;
+    &__user__image {
+        margin-right: 1rem;
+        height: 2.25rem;
+        width: 2.25rem;
         border-radius: 50%;
-        background-color: $secondary-mercury;
+        background-color: $secondary-second;
         
         @include tablet {
-            height: 48px;
-            width: 48px;
+            height: 3rem;
+            width: 3rem;
         }
     }
 
@@ -343,15 +336,15 @@
     &__header {
         display: flex;
         justify-content: space-between;
-        font-size: 13px;
+        font-size: 0.8125rem;
         @include tablet {
-            font-size: 14px;
+            font-size: 0.875rem;
         }
     }
 
     &__user__name {
         margin: 0px;
-        color: $primary-black;
+        color: $primary-first;
         font-weight: 600;
     }
 

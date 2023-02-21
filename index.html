@@ -70,15 +70,15 @@
     <section class="gallery">
         <h2 class="gallery__title">Photo Gallery</h2>
         <div class="gallery__images">
-            <img class="gallery__image" src="./Assets/images/Photo-gallery-2.jpg" alt="">
-            <img class="gallery__image" src="./Assets/images/Photo-gallery-3.jpg" alt="">
-            <img class="gallery__image" src="./Assets/images/Photo-gallery-4.jpg" alt="">
-            <img class="gallery__image" src="./Assets/images/Photo-gallery-1.jpg" alt="">
-            <img class="gallery__image" src="./Assets/images/Photo-gallery-5.jpg" alt="">
-            <img class="gallery__image" src="./Assets/images/Photo-gallery-6.jpg" alt="">
-            <img class="gallery__image" src="./Assets/images/Photo-gallery-7.jpg" alt="">
-            <img class="gallery__image" src="./Assets/images/Photo-gallery-8.jpg" alt="">
-            <img class="gallery__image" src="./Assets/images/Photo-gallery-9.jpg" alt="">
+            <img class="gallery__image" src="./Assets/images/Photo-gallery-2.jpg" alt="girl dancing with hands up">
+            <img class="gallery__image" src="./Assets/images/Photo-gallery-3.jpg" alt="hands up in a concert">
+            <img class="gallery__image" src="./Assets/images/Photo-gallery-4.jpg" alt="girl looking at the stage with right hand up">
+            <img class="gallery__image" src="./Assets/images/Photo-gallery-1.jpg" alt="people looking toward the stage">
+            <img class="gallery__image" src="./Assets/images/Photo-gallery-5.jpg" alt="concert show">
+            <img class="gallery__image" src="./Assets/images/Photo-gallery-6.jpg" alt="singer on stage with one hand up">
+            <img class="gallery__image" src="./Assets/images/Photo-gallery-7.jpg" alt="concert image for behind the crowd">
+            <img class="gallery__image" src="./Assets/images/Photo-gallery-8.jpg" alt="DJ set">
+            <img class="gallery__image" src="./Assets/images/Photo-gallery-9.jpg" alt="confetti falling on crowd">
         </div>
     </section>
 
@@ -86,92 +86,32 @@
         <h2 class="conversation__title">Join the Conversation</h2>
         <div class="conversation__container">   
             <div class="conversation__muhan-muruge-image">
-                <img src="./Assets/images/Mohan-muruge.jpg" alt="Mohan Muruge">
+                <img src="./Assets/images/Mohan-muruge.jpg" alt="Mohan Muruge face image">
             </div>
             <form class="conversation__form">
                 <div class="conversation__name">
-                    <label class="conversation__label" for="name">Name</label>    
+                    <label class="conversation__label" for="commentUserName">Name</label>    
                     <input 
                     class="conversation__input" 
                     type="text" 
                     placeholder="Enter your name"
-                    name="userName"
-                    id="userName">  
+                    name="commentUserName"
+                    id="commentUserName" required>  
                 </div>    
-                <div class="conversation__comment">    
-                    <label class="conversation__label" for="comment">Comment</label>
-                    <textarea
-                    class="conversation__input conversation__input--comment" 
-                    type="text" 
-                    placeholder="Add a new comment"
-                    name= "userComment"
-                    id="userComment">
-                    </textarea>
-                </div>
-                <div class="conversation__comment__btn">
-                    <a href="#">Comment</a>
-                </div>
+                <label class="conversation__label" for="commentText">Comment</label>
+                <textarea
+                class="conversation__input conversation__input--comment" 
+                type="text" 
+                placeholder="Add a new comment"
+                name= "commentText"
+                id="commentText" required></textarea>
+                <button class="conversation__comment__btn" type="submit">Comment</button>
             </form>           
         </div>
     </section>
 
     <ul class="comment">
-        <li class="comment__entry">
-            <div class="comment__user-image">
-                <!-- empty div for the silver img -->
-            </div>
-            <div class="comment__info">
-                <div class="comment__header">
-                    <p class="comment__user__name">Connor Walton</p>
-                    <p class="comment__date">02/17/2021</p>
-                </div>
-                <div class="comment__input">
-                    <p class="comment__text">This is art. This is inexplicable magic 
-                        expressed in the purest way, everything 
-                        that makes up this majestic work 
-                        deserves reverence. Let us appreciate 
-                        this for what it is and what it contains.</p>
-                </div>
-            </div>
-        </li>
-        
-        <li class="comment__entry">
-            <div class="comment__user-image">
-                <!-- empty div for the silver img -->
-            </div>
-            <div class="comment__info">
-                <div class="comment__header">
-                    <p class="comment__user__name">Connor Walton</p>
-                    <p class="comment__date">02/17/2021</p>
-                </div>
-                <div class="comment__input">
-                    <p class="comment__text">This is art. This is inexplicable magic 
-                        expressed in the purest way, everything 
-                        that makes up this majestic work 
-                        deserves reverence. Let us appreciate 
-                        this for what it is and what it contains.</p>
-                </div>
-            </div>
-        </li>
-
-        <li class="comment__entry">
-            <div class="comment__user-image">
-                <!-- empty div for the silver img -->
-            </div>
-            <div class="comment__info">
-                <div class="comment__header">
-                    <p class="comment__user__name">Connor Walton</p>
-                    <p class="comment__date">02/17/2021</p>
-                </div>
-                <div class="comment__input">
-                    <p class="comment__text">This is art. This is inexplicable magic 
-                        expressed in the purest way, everything 
-                        that makes up this majestic work 
-                        deserves reverence. Let us appreciate 
-                        this for what it is and what it contains.</p>
-                </div>
-            </div>
-        </li>
+            
 
     </ul>
 
@@ -239,6 +179,6 @@
             <p class="footer__copyright">Copyright The Bees Knees © 2021 All Rights Reserved</p>
         </section>
     </footer>
-
+    <script src=".//Scripts/index-page.js"></script>
 </body>
 </html>

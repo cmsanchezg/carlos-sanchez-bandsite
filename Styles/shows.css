@@ -101,17 +101,17 @@
 
 @media (min-width: 768px) {
   .show {
-    padding: 0px 36px;
+    padding: 0rem 2.25rem;
   }
 }
 @media (min-width: 1280px) {
   .show {
-    padding: 0px 144px;
+    padding: 0rem 9rem;
     display: flex;
   }
   .show__section {
     flex-direction: column;
-    padding: 36px 0px;
+    padding: 2.25rem 0rem;
     width: 100%;
   }
 }
@@ -120,7 +120,7 @@
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 600;
-  padding: 24px 16px 8px;
+  padding: 1.5rem 1rem 0.5rem;
 }
 @media (min-width: 768px) {
   .show__header {
@@ -131,7 +131,7 @@
 }
 @media (min-width: 1280px) {
   .show__header {
-    margin-right: 100px;
+    margin-right: 6.25rem;
   }
 }
 .show__sub__header--tablet__invisible {
@@ -143,7 +143,7 @@
   }
 }
 .show__sub__header--tablet__invisible > p {
-  padding: 0px 16px;
+  padding: 0rem 1rem;
 }
 @media (min-width: 768px) {
   .show__sub__header--mobile__invisible {
@@ -174,8 +174,8 @@
   }
 }
 .show__date, .show__venue, .show__location {
-  line-height: 18px;
-  padding: 4px 16px;
+  line-height: 1.125rem;
+  padding: 0.25rem 1rem;
 }
 @media (min-width: 768px) {
   .show__date, .show__venue, .show__location {
@@ -186,25 +186,25 @@
   margin: 0px;
   color: #afafaf;
   font-family: "AvenirNext LT Pro";
-  font-size: 10px;
+  font-size: 0.625rem;
   font-weight: 600;
   text-transform: uppercase;
-  margin: 4px 0px;
+  margin: 0.25rem 0rem;
   width: 25%;
 }
 @media (min-width: 768px) {
   .show__sub__header {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 @media (min-width: 1280px) {
   .show__sub__header {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 .show__info {
-  margin: 0px;
-  font-size: 13px;
+  margin: 0rem;
+  font-size: 0.8125rem;
   font-weight: 600;
 }
 .show__info--bolder {
@@ -212,21 +212,21 @@
 }
 @media (min-width: 768px) {
   .show__info {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 @media (min-width: 1280px) {
   .show__info {
-    font-size: 16px;
+    font-size: 1rem;
   }
 }
 .show__buy__ticket__btn {
   background-color: #323232;
   text-transform: uppercase;
   text-align: center;
-  padding: 10px;
-  border-radius: 4px;
-  margin: 16px;
+  padding: 0.625rem;
+  border-radius: 0.25rem;
+  margin: 1rem;
   height: 40px;
 }
 .show__buy__ticket__btn:hover {
@@ -234,13 +234,13 @@
 }
 @media (min-width: 768px) {
   .show__buy__ticket__btn {
-    width: 150px;
+    width: 9.375rem;
     margin-left: auto;
   }
 }
 .show__buy__ticket__btn > a {
   color: #ffffff;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 600;
   text-decoration: none;
 }/*# sourceMappingURL=shows.css.map */

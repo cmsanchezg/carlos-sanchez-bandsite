@@ -5,19 +5,18 @@
 
 * {
     box-sizing: border-box;
-    font-family: 'AvenirNext LT Pro';
+    font-family: 'AvenirNext LT Pro', Arial, Helvetica, sans-serif;
 }
 
 body {
     margin: 0;
-    // font-family: 'AvenirNext LT Pro';
-    color: $primary-black;
+    color: $primary-first;
 }
 
 //header and nav bar//
 
 .header {
-    color: $primary-white;
+    color: $primary-third;
     background-color: $header-background;
     text-align: center;
     @include tablet {
@@ -58,11 +57,12 @@ body {
     }
 
     &__item--active {
-        border-bottom: 3px solid $primary-white;
+        border-bottom: 3px solid $primary-third;
+        font-weight: 600;
     }
 
     &__link {
-        color: $primary-white;
+        color: $primary-third;
         text-decoration: none;
         }
     }
@@ -72,7 +72,7 @@ body {
 
 .footer {
     background-color: $footer-background;
-    color: $primary-white;
+    color: $primary-third;
     padding: 0rem 1rem;
     @include tablet {
         padding: 0rem 2.25rem;
@@ -181,7 +181,7 @@ body {
 
     &__email > a {
         margin: 0rem;
-        color: $primary-white;
+        color: $primary-third;
         text-decoration: none;
 
     }

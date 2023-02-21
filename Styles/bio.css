@@ -243,16 +243,16 @@
 }
 
 .conversation {
-  padding: 0px 16px;
+  padding: 0rem 1rem;
 }
 @media (min-width: 768px) {
   .conversation {
-    padding: 0px 36px;
+    padding: 0rem 2.25rem;
   }
 }
 @media (min-width: 768px) and (min-width: 1280px) {
   .conversation {
-    padding: 0px 150px;
+    padding: 0rem 9.375rem;
   }
 }
 .conversation__title {
@@ -275,21 +275,21 @@
 }
 @media (min-width: 768px) {
   .conversation__container {
-    margin: 0px 60px;
+    margin: 0rem 3.75rem;
   }
 }
 @media (min-width: 1280px) {
   .conversation__container {
-    margin: 0px 240px;
+    margin: 0rem 15rem;
   }
 }
 .conversation__muhan-muruge-image {
-  padding-top: 28px;
-  margin-right: 16px;
+  padding-top: 1.75rem;
+  margin-right: 1rem;
 }
 .conversation__muhan-muruge-image > img {
-  height: 36px;
-  width: 36px;
+  height: 2.25rem;
+  width: 2.25rem;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -298,8 +298,8 @@
 }
 @media (min-width: 768px) {
   .conversation__muhan-muruge-image > img {
-    height: 48px;
-    width: 48px;
+    height: 3rem;
+    width: 3rem;
   }
 }
 .conversation__form {
@@ -308,61 +308,56 @@
   width: 100%;
 }
 .conversation__name {
-  padding: 8px 0px;
+  padding: 0.5rem 0rem;
 }
 .conversation__label {
   color: #afafaf;
   font-family: "AvenirNext LT Pro";
-  font-size: 10px;
+  font-size: 0.625rem;
   font-weight: 600;
   text-transform: uppercase;
-  margin: 4px 0px;
+  margin: 0.25rem 0rem;
 }
 @media (min-width: 768px) {
   .conversation__label {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 .conversation__input {
-  height: 36px;
+  height: 2.25rem;
   width: 100%;
   border: 1.5px solid #e1e1e1;
   border-radius: 4px;
-  padding: 12px;
+  padding: 0.75rem;
 }
 @media (min-width: 768px) {
   .conversation__input {
-    height: 48px;
-    padding: 16px;
+    height: 3rem;
+    padding: 1rem;
   }
 }
 .conversation__input--comment {
-  height: 100px;
-}
-.conversation__comment {
-  padding: 10px 0px;
+  height: 6.25rem;
 }
 .conversation__comment__btn {
   background-color: #323232;
-  text-transform: uppercase;
   text-align: center;
-  padding: 10px;
-  border-radius: 4px;
-  margin-bottom: 24px;
-  height: 40px;
+  color: #ffffff;
+  padding: 0.625rem;
+  border-radius: 0.25rem;
+  margin: 1rem 0rem;
+  height: 2.5rem;
+  text-transform: uppercase;
+  font-size: 0.875;
+  font-weight: 600;
+  border: none;
 }
 @media (min-width: 768px) {
   .conversation__comment__btn {
-    width: 150px;
-    padding: 10px 32px;
+    width: 9.375rem;
+    padding: 0.625rem 2rem;
     margin-left: auto;
   }
-}
-.conversation__comment__btn > a {
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: 600;
-  text-decoration: none;
 }
 
 .comment {
@@ -370,30 +365,30 @@
 }
 @media (min-width: 768px) {
   .comment {
-    padding: 0px 96px;
+    padding: 0rem 6rem;
   }
 }
 @media (min-width: 768px) and (min-width: 1280px) {
   .comment {
-    padding: 0px 390px;
+    padding: 0rem 24.375rem;
   }
 }
-.comment__entry {
+.comment__item {
   border-bottom: 1.5px solid #e1e1e1;
-  padding-top: 16px;
+  padding-top: 1rem;
   display: flex;
 }
-.comment__user-image {
-  margin-right: 16px;
-  height: 36px;
-  width: 36px;
+.comment__user__image {
+  margin-right: 1rem;
+  height: 2.25rem;
+  width: 2.25rem;
   border-radius: 50%;
   background-color: #e1e1e1;
 }
 @media (min-width: 768px) {
-  .comment__user-image {
-    height: 48px;
-    width: 48px;
+  .comment__user__image {
+    height: 3rem;
+    width: 3rem;
   }
 }
 .comment__info {
@@ -402,11 +397,11 @@
 .comment__header {
   display: flex;
   justify-content: space-between;
-  font-size: 13px;
+  font-size: 0.8125rem;
 }
 @media (min-width: 768px) {
   .comment__header {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 .comment__user__name {

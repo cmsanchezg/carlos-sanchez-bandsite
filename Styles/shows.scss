@@ -35,7 +35,7 @@
         line-height: 1.1125rem;
         font-weight: 400;    
         margin: 0rem;
-        color: $primary-white;
+        color: $primary-third;
         margin-bottom: 16px;
         @include tablet {
             font-size: 24px;
@@ -46,7 +46,7 @@
     &__song {
         @include mobile-hero-header;
         margin: 0rem;
-        color: $primary-white;
+        color: $primary-third;
         width: 70%;
         margin-bottom: 16px;
         @include tablet {
@@ -70,15 +70,15 @@
 
 .show {
     @include tablet {
-        padding: 0px 36px;
+        padding: 0rem 2.25rem;
     }
     
     @include desktop {
-        padding: 0px 144px;
+        padding: 0rem 9rem;
         display: flex;
         &__section {
             flex-direction: column;
-            padding: 36px 0px;
+            padding: 2.25rem 0rem;
             width: 100%;
         }
     }
@@ -86,13 +86,13 @@
     &__header {
         margin: 0px;
         @include mobile-section-header;
-        padding: 24px 16px 8px;
+        padding: 1.5rem 1rem .5rem;
 
         @include tablet {
             @include tablet-desktop-section-header
         }
         @include desktop {
-            margin-right: 100px;
+            margin-right: 6.25rem;
         }
     }
 
@@ -107,7 +107,7 @@
     }
 
     &__sub__header--tablet__invisible > p {
-        padding: 0px 16px;
+        padding: 0rem 1rem;
     }
     
     // " __sub__header--mobile__invisible to remove header from being display in tablet/desktop screen" //
@@ -124,17 +124,17 @@
     }
 
     &__item {
-        border-bottom: 1.5px solid $secondary-mercury;
+        border-bottom: 1.5px solid $secondary-second;
         list-style: none;
 
         &:hover {
-            background-color: $secondary-alabaster;
+            background-color: $secondary-third;
         }
 
         &--clicked {
-            background-color: $secondary-mercury;
+            background-color: $secondary-second;
             &:hover {
-                background-color: $secondary-mercury;
+                background-color: $secondary-second;
             }
         }
 
@@ -147,8 +147,8 @@
     &__date,
     &__venue,
     &__location {
-        line-height: 18px;
-        padding: 4px 16px;
+        line-height: 1.125rem;
+        padding: 0.25rem 1rem;
         
         @include tablet {
             width: 25%;
@@ -157,26 +157,26 @@
 
     &__sub__header {
         margin: 0px;
-        color: $primary-silver;
-        font-family: 'AvenirNext LT Pro';
-        font-size: 10px;
+        color: $primary-second;
+        font-family: 'AvenirNext LT Pro', Arial, Helvetica, sans-serif;
+        font-size: .625rem;
         font-weight: 600;
         text-transform: uppercase;
-        margin: 4px 0px;
+        margin: 0.25rem 0rem;
         width: 25%;
         
         @include tablet {
-            font-size: 12px;
+            font-size: .75rem;
         }
         
         @include desktop {
-            font-size: 14px;
+            font-size: .875rem;
         }
     }
 
     &__info {
-        margin: 0px;
-        font-size: 13px;
+        margin: 0rem;
+        font-size: .8125rem;
         font-weight: 600;
 
         &--bolder {
@@ -184,36 +184,36 @@
         }
         
         @include tablet {
-            font-size: 14px;
+            font-size: .875rem;
         }
         
         @include desktop {
-            font-size: 16px;
+            font-size: 1rem;
         }
     }
 
     &__buy__ticket__btn {
-        background-color: $primary-black;
+        background-color: $primary-main;
         text-transform  : uppercase;
         text-align: center;
-        padding: 10px;
-        border-radius: 4px;
-        margin: 16px;
+        padding: 0.625rem;
+        border-radius: 0.25rem;
+        margin: 1rem;
         height: 40px;
         
         &:hover {
-            background-color: $secondary-darkblack;
+            background-color: $secondary-first;
         }
 
         @include tablet {
-            width: 150px;
+            width: 9.375rem;
             margin-left: auto;
         }
     }
 
     &__buy__ticket__btn > a {
-        color: $primary-white;
-        font-size: 14px;
+        color: $primary-third;
+        font-size: 0.875rem;
         font-weight: 600;
         text-decoration: none;
     }

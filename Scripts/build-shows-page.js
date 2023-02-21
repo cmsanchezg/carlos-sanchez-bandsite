@@ -12,8 +12,8 @@ const show = [
         showSubHeader1: "Date",
         showSubHeader2: "Venue",
         showSubHeader3: "Location",
-        showDate:"Mon Sept 06 2021",
-        showVenue: "Roland Lane",
+        showDate:"Tue Sept 21 2021",
+        showVenue: "Pier 3 East",
         showLocation:"San Francisco, CA",
         showBuyTicketLink: "Buy Ticket",
     },
@@ -21,8 +21,8 @@ const show = [
         showSubHeader1: "Date",
         showSubHeader2: "Venue",
         showSubHeader3: "Location",
-        showDate:"Mon Sept 06 2021",
-        showVenue: "Roland Lane",
+        showDate:"Fri Oct 15 2021",
+        showVenue: "View Lounge",
         showLocation:"San Francisco, CA",
         showBuyTicketLink: "Buy Ticket",
     },
@@ -30,8 +30,8 @@ const show = [
         showSubHeader1: "Date",
         showSubHeader2: "Venue",
         showSubHeader3: "Location",
-        showDate:"Mon Sept 06 2021",
-        showVenue: "Roland Lane",
+        showDate:"Sat Nov 06 2021",
+        showVenue: "Hyatt Agency",
         showLocation:"San Francisco, CA",
         showBuyTicketLink: "Buy Ticket",
     },
@@ -39,8 +39,8 @@ const show = [
         showSubHeader1: "Date",
         showSubHeader2: "Venue",
         showSubHeader3: "Location",
-        showDate:"Mon Sept 06 2021",
-        showVenue: "Roland Lane",
+        showDate:"Fri Nov 26 2021",
+        showVenue: "Moscow Center",
         showLocation:"San Francisco, CA",
         showBuyTicketLink: "Buy Ticket",
     },
@@ -48,8 +48,8 @@ const show = [
         showSubHeader1: "Date",
         showSubHeader2: "Venue",
         showSubHeader3: "Location",
-        showDate:"Mon Sept 06 2021",
-        showVenue: "Roland Lane",
+        showDate:"Wed Dec 15 2021",
+        showVenue: "Press Club",
         showLocation:"San Francisco, CA",
         showBuyTicketLink: "Buy Ticket",
     },
@@ -57,7 +57,7 @@ const show = [
 
 
 
-    //HTML
+    // HTML
 
     const showList = document.querySelector(".show__list");
 
