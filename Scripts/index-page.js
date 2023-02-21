@@ -1,3 +1,5 @@
+const apiUrl = "https://project-1-api.herokuapp.com/";
+
 const conversationForm = document.querySelector(".conversation__form");
 const commentUl = document.querySelector(".comment");
 
