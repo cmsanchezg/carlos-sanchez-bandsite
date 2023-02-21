@@ -1,5 +1,5 @@
 const conversationForm = document.querySelector(".conversation__form");
-const comment = document.querySelector(".comment");
+const commentUl = document.querySelector(".comment");
 
 
 const commentList = [
@@ -23,7 +23,7 @@ const commentList = [
 
 conversationForm.addEventListener("submit", (event) => {
     event.preventDefault();
-    comment.innerText = "";
+    commentUl.innerText = "";
 
     const newComment = {
         commentUserName: event.target.commentUserName.value,
@@ -31,19 +31,26 @@ conversationForm.addEventListener("submit", (event) => {
         commentText: event.target.commentText.value,
     }
     commentList.push(newComment);
-    displayComment();
+    commentList.sort ((a, b) => new Date(b.commentDate) - new Date(a.commentDate));
+    
+    clearComment(commentUl)
     event.target.reset();
+
+    for (let i = 0; i < 3; i++) {
+        displayComment(commentList[i]);
+    }
 });
+
+function clearComment (parent) {
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
+    }
+}
 
 
 // HTML
 
-function displayComment() {
-
-    commentList.sort ((a, b) => new Date(b.commentDate) - new Date(a.commentDate));
-
-    for (let i = 0; i < 3; i++) {
-    
+function displayComment(comment) {
 
 // li comment entry
 
@@ -67,11 +74,11 @@ commentHeader.classList.add("comment__header");
 
 const commentUserName = document.createElement("p");
 commentUserName.classList.add("comment__user__name");
-commentUserName.innerText = commentList[i].commentUserName;
+commentUserName.innerText = comment.commentUserName;
 
 const commentDate = document.createElement("p");
 commentDate.classList.add("comment__date");
-commentDate.innerText = commentList[i].commentDate;
+commentDate.innerText = comment.commentDate;
 
 
 
@@ -82,7 +89,7 @@ commentInput.classList.add("comment__input");
 
 const commentText = document.createElement("p");
 commentText.classList.add("comment__text");
-commentText.innerText = commentList[i].commentText;
+commentText.innerText = comment.commentText;
 
 
 
@@ -98,9 +105,10 @@ commentInput.appendChild(commentText);
 commentInfo.appendChild(commentInput);
 
 
-comment.appendChild(commentItem);
+commentUl.appendChild(commentItem);
 
-};
 }
 
-displayComment();
+for (let i = 0; i < 3; i++) {
+    displayComment(commentList[i]);
+}
