@@ -1,54 +1,16 @@
-const apiUrl = "https://project-1-api.herokuapp.com/";
+const apiUrl = "https://project-1-api.herokuapp.com";
+const apiKey ="5c4dc9ab-87bc-46a1-ba63-8149376c7edb";
+
 
 const conversationForm = document.querySelector(".conversation__form");
 const commentUl = document.querySelector(".comment");
 
-
-const commentList = [
-    {
-        commentUserName:"Connor Walton",
-        commentDate: new Date("02/17/2021").toLocaleDateString(),
-        commentText:"This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
-    },
-    {
-        commentUserName:"Emilie Beach",
-        commentDate: new Date("01/09/2021").toLocaleDateString(),
-        commentText:"I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
-    },
-    {
-        commentUserName:"Miles Acosta",
-        commentDate:new Date("12/20/2020").toLocaleDateString(),
-        commentText:"I can't stop listening. Every time I hear one of their songs the vocals it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can t get enough.",
-    },
-];
-
-
-conversationForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-    commentUl.innerText = "";
-
-    const newComment = {
-        commentUserName: event.target.commentUserName.value,
-        commentDate: new Date().toLocaleDateString(),
-        commentText: event.target.commentText.value,
-    }
-    commentList.push(newComment);
-    commentList.sort ((a, b) => new Date(b.commentDate) - new Date(a.commentDate));
-    
-    clearComment(commentUl)
-    event.target.reset();
-
-    for (let i = 0; i < 3; i++) {
-        displayComment(commentList[i]);
-    }
-});
 
 function clearComment (parent) {
     while (parent.firstChild) {
         parent.removeChild(parent.firstChild);
     }
 }
-
 
 // HTML
 
@@ -76,12 +38,12 @@ commentHeader.classList.add("comment__header");
 
 const commentUserName = document.createElement("p");
 commentUserName.classList.add("comment__user__name");
-commentUserName.innerText = comment.commentUserName;
+commentUserName.innerText = comment.name;
+
 
 const commentDate = document.createElement("p");
 commentDate.classList.add("comment__date");
-commentDate.innerText = comment.commentDate;
-
+commentDate.innerText = comment.timestamp;
 
 
 // div comment input
@@ -91,7 +53,7 @@ commentInput.classList.add("comment__input");
 
 const commentText = document.createElement("p");
 commentText.classList.add("comment__text");
-commentText.innerText = comment.commentText;
+commentText.innerText = comment.comment;
 
 
 
@@ -109,8 +71,47 @@ commentInfo.appendChild(commentInput);
 
 commentUl.appendChild(commentItem);
 
+};
+
+
+function getComment() {
+    axios
+    .get(`${apiUrl}/comments?api_key=${apiKey}`)
+    .then((response) => {
+        const data = response.data;
+        commentUl.innerText = "";
+
+        data.sort ((a, b) => new Date (b.timestamp) - new Date (a.timestamp))
+
+        data.forEach(comment => {
+            displayComment (comment)
+        });    
+    })
+    .catch((error) => {
+        console.log("error: ",error);
+    });
 }
 
-for (let i = 0; i < 3; i++) {
-    displayComment(commentList[i]);
-}
+getComment();
+
+conversationForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    console.log(event)
+
+        const newComment = {
+        name: event.target.commentUserName.value,
+        comment: event.target.commentText.value,
+    };
+
+    axios
+    .post (`${apiUrl}/comments?api_key=${apiKey}`, newComment)
+    .then((response) => {
+
+        event.target.commentUserName.value = "";
+        event.target.commentText.value = "";
+
+    }).then (() => getComment())
+    .catch((error) => {
+        console.log("error: ",error);
+    });
+});
