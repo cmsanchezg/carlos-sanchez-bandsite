@@ -1,5 +1,5 @@
 const apiUrl = "https://project-1-api.herokuapp.com";
-const apiKey ="5c4dc9ab-87bc-46a1-ba63-8149376c7edb";
+const apiKey ="ce158f6f-29bb-4ff9-8bef-bf250b918974";
 
 
 const conversationForm = document.querySelector(".conversation__form");
@@ -75,6 +75,7 @@ commentUl.appendChild(commentItem);
 };
 
 
+
 function getComment() {
     axios
     .get(`${apiUrl}/comments?api_key=${apiKey}`)
@@ -97,11 +98,12 @@ getComment();
 
 conversationForm.addEventListener("submit", (event) => {
     event.preventDefault();
+    
     console.log(event)
 
-        const newComment = {
-        name: event.target.commentUserName.value,
-        comment: event.target.commentText.value,
+    const newComment = {
+    name: event.target.commentUserName.value,
+    comment: event.target.commentText.value,
     };
 
     axios
@@ -116,3 +118,29 @@ conversationForm.addEventListener("submit", (event) => {
         console.log("error: ",error);
     });
 });
+
+
+// WAS NOT ABLE TO MAKE IT WORK, ONE EVENT LISTENER OVERWRITES THE OTHER ONE//
+
+// const commentButton = document.querySelector(".conversation__comment__btn");
+// const commentName = document.querySelector("#commentUserName");
+// const commentText = document.querySelector("#commentText");
+
+
+// function nameInput () {
+//     if (!commentName.value) {
+//         commentName.style.border = "red solid 1.5px"
+//     }
+// }
+
+// function commentInput () {
+//     if (!commentText.value) {
+//         commentText.style.border = "red solid 1.5px"
+//     }
+// }
+
+// commentButton.addEventListener ("submit", (event) => {
+//     event.preventDefault();
+//     nameInput();
+//     commentInput();
+// });
