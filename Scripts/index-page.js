@@ -42,8 +42,9 @@ commentUserName.innerText = comment.name;
 
 
 const commentDate = document.createElement("p");
+const dateFormat = new Date(comment.timestamp);
 commentDate.classList.add("comment__date");
-commentDate.innerText = comment.timestamp;
+commentDate.innerText = dateFormat.toLocaleDateString();
 
 
 // div comment input
